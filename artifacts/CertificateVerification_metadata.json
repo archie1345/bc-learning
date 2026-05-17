@@ -1,0 +1,144 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "certificates",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "studentName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "course",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "hash",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "issueDate",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_hash",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_studentName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_course",
+						"type": "string"
+					}
+				],
+				"name": "issueCertificate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_hash",
+						"type": "string"
+					}
+				],
+				"name": "verifyCertificate",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "studentName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "course",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "hash",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "issueDate",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct CertificateVerification.Certificate",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Certificate.sol": "CertificateVerification"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Certificate.sol": {
+			"keccak256": "0xb6599ac3816a069d9cd2810224cd7915ce5998a839ed1cbf15f32d6eb80b28a7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://100e7489e63c5df6f591f653bce71b30ddad24f0bd59e59c15d6818f63a0226a",
+				"dweb:/ipfs/QmfE8h9JxdpiJNsEpjVWvPCArdD4xriNbgfQ2Wyntw3U4x"
+			]
+		}
+	},
+	"version": 1
+}

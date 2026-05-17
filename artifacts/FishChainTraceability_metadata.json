@@ -1,0 +1,388 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "batchId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "farmerName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "createdBy",
+						"type": "address"
+					}
+				],
+				"name": "BatchCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "batchId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "action",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "updatedBy",
+						"type": "address"
+					}
+				],
+				"name": "BatchUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_distributorName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_destination",
+						"type": "string"
+					}
+				],
+				"name": "addDistributionData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_weightKg",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_qualityGrade",
+						"type": "string"
+					}
+				],
+				"name": "addHarvestData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "batchCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_productName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_species",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_farmLocation",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_farmerName",
+						"type": "string"
+					}
+				],
+				"name": "createBatch",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					}
+				],
+				"name": "getBasicBatchInfo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "batchId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "species",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "farmLocation",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "farmerName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "createdBy",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					}
+				],
+				"name": "getBatchHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					}
+				],
+				"name": "getDistributionInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "distributorName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "destination",
+						"type": "string"
+					},
+					{
+						"internalType": "enum FishChainTraceability.BatchStatus",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					}
+				],
+				"name": "getHarvestInfo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "harvestDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "weightKg",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "qualityGrade",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getHistoryByIndex",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "action",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "updatedBy",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					}
+				],
+				"name": "markAsDelivered",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					}
+				],
+				"name": "verifyBatch",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"FishChainTracibility.sol": "FishChainTraceability"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"FishChainTracibility.sol": {
+			"keccak256": "0x51b5ae9d993d79c0b008f45a13bb3a567c955c83414919cb7d73ac474d7f25ba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://74bb4a4447f6e811fe0b9098081d6766dddc5aafb0cd31f26ead6f93e1199303",
+				"dweb:/ipfs/QmdiscFau9XR3Kmt38smWz84BkYDuciQfpo5dBbvGoUenM"
+			]
+		}
+	},
+	"version": 1
+}
