@@ -174,6 +174,47 @@
 						"type": "uint256"
 					}
 				],
+				"name": "getAllBatchHistory",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "action",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "updatedBy",
+								"type": "address"
+							}
+						],
+						"internalType": "struct FishChainTraceability.History[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					}
+				],
 				"name": "getBasicBatchInfo",
 				"outputs": [
 					{
@@ -313,9 +354,33 @@
 						"type": "string"
 					},
 					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					},
+					{
 						"internalType": "address",
 						"name": "updatedBy",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchId",
+						"type": "uint256"
+					}
+				],
+				"name": "getHistoryCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -376,11 +441,11 @@
 	},
 	"sources": {
 		"FishChainTracibility.sol": {
-			"keccak256": "0x51b5ae9d993d79c0b008f45a13bb3a567c955c83414919cb7d73ac474d7f25ba",
+			"keccak256": "0x7552def4aa9dedf037c8155e07dc5aab18df8ce71b1b513938286bf01b4ba0da",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://74bb4a4447f6e811fe0b9098081d6766dddc5aafb0cd31f26ead6f93e1199303",
-				"dweb:/ipfs/QmdiscFau9XR3Kmt38smWz84BkYDuciQfpo5dBbvGoUenM"
+				"bzz-raw://489c64e48b3cd87cb3e8e469159cffdd1a6b5cd009ac6557256a51d15557ed63",
+				"dweb:/ipfs/QmXb3SpuuHc86qXd8nKJYEBe5osHXjnjFVKXnnRe9FHKiw"
 			]
 		}
 	},

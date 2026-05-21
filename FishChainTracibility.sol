@@ -232,13 +232,22 @@ contract FishChainTraceability {
     function getHistoryByIndex(uint256 _batchId, uint256 _index) public view batchExists(_batchId) returns (
         string memory action,
         string memory description,
+        uint256 timestamp,
         address updatedBy
     ){
         require(_index < batchHistories[_batchId].length, "History index out of range");
 
         History memory history = batchHistories[_batchId][_index];
 
-        return (history.action,history.description,history.updatedBy);
+        return (history.action,history.description,history.timestamp,history.updatedBy);
+    }
+
+    function getHistoryCount(uint256 _batchId) public view batchExists(_batchId) returns (uint256){
+        return batchHistories[_batchId].length;
+    }
+
+    function getAllBatchHistory(uint256 _batchId) public view batchExists(_batchId) returns (History[] memory){
+        return batchHistories[_batchId];
     }
 
     function getBatchHash(uint256 _batchId) public view batchExists(_batchId) returns (bytes32){
